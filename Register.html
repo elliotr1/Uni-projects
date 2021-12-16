@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="login.css">
+    <title>login Page</title>
+</head>
+<body>
+<script src="userChecker.js"></script>
+
+<div class="registerContainer">
+    <form class="modal-content animate" method="post">
+
+        <h1 class="loginTitle"> Register</h1><br>
+
+        <label for="userName">First name:</label><br>
+        <input type="text" id="userName" placeholder= "Username " required maxlength="30" ><br><br>
+
+        <label  class="required-field" for="phoneNumber">Phone Number:</label><br>
+        <input type="tel" id="phoneNumber" placeholder="Phone number"><br><br>
+
+
+
+        <label class="required-field" for="DOB">Date of birth:</label><br>
+        <input type="date" id="DOB" name="DOBlabel"><br><br>
+
+        <label class="required-field" for="email">Username:</label><br>
+        <input type="email" id="email" name="userNameInput" placeholder="Email" required maxlength="100"><br><br>
+
+        <label class="required-field" for="password">Password:</label><br>
+        <input type="password" id="password" name="passwordInput" placeholder="Password"
+               required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,70}"><br><br>
+
+         <button onclick="location.href='tiles.html'"  type="submit" id="RegisterButton" name="RegisterButton" onclick="goto()"> Submit</button><br>
+
+        <label for="rememberMe">Remember me</label>
+        <input type="checkbox" id="rememberMe" name="Remember"><br><br>
+
+        <label class="required-field" for="privacyAgreement"><a href="#" class="privacy">  Privacy agreement</a></label>
+        <input type="checkbox" id="privacyAgreement" name="Privacy agreement"><br><br>
+
+        <a class="forgot" href="forgotPassword.html">Forgot password?</a><br>
+
+        <a class="forgot" href="LoginPage.html">Login</a>
+
+</form>
+</div>
+<div id="message">
+    <h3>Password must contain the following:</h3>
+    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+    <p id="number" class="invalid">A <b>number</b></p>
+    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div>
+</body>
+
+</html>
